@@ -1,0 +1,47 @@
+<?php
+
+return [
+    'after_or_equal' => 'يجب أن يكون :attribute في :date أو بعده.',
+    'array' => 'حقل :attribute غير صالح.',
+    'boolean' => 'قيمة :attribute غير صالحة.',
+    'date' => 'حقل :attribute ليس تاريخاً صالحاً.',
+    'email' => 'يجب أن يكون :attribute عنوان بريد إلكتروني صالحاً.',
+    'exists' => 'القيمة المختارة في :attribute غير صالحة.',
+    'file' => 'يجب أن يكون :attribute ملفاً.',
+    'image' => 'يجب أن يكون :attribute صورة.',
+    'integer' => 'يجب أن يكون :attribute عدداً صحيحاً.',
+    'max' => [
+        'array' => 'يجب ألا يزيد :attribute عن :max ملفات.',
+        'file' => 'يجب ألا يتجاوز حجم :attribute :max كيلوبايت.',
+        'numeric' => 'يجب ألا يزيد :attribute عن :max.',
+        'string' => 'يجب ألا يزيد :attribute عن :max حرفاً.',
+    ],
+    'mimes' => 'يجب أن يكون :attribute من نوع: :values.',
+    'min' => [
+        'numeric' => 'يجب ألا يقل :attribute عن :min.',
+    ],
+    'regex' => 'صيغة :attribute غير صالحة.',
+    'required' => 'حقل :attribute مطلوب.',
+    'string' => 'يجب أن يكون :attribute نصاً.',
+    'unique' => ':attribute مستخدم من قبل.',
+    'uploaded' => 'فشل رفع :attribute، قد يكون حجمه أكبر من المسموح.',
+
+    'attributes' => [
+        'name' => 'الاسم',
+        'description' => 'الوصف',
+        'hours' => 'عدد الساعات',
+        'is_active' => 'الحالة',
+        'full_name' => 'الاسم الكامل',
+        'email' => 'البريد الإلكتروني',
+        'phone' => 'رقم الهاتف',
+        'photo' => 'الصورة الشخصية',
+        'documents' => 'الملفات المرفقة',
+        'documents.*' => 'الملف المرفق',
+        'course_id' => 'الكورس',
+        'start_date' => 'تاريخ البداية',
+        'end_date' => 'تاريخ النهاية',
+        'seats' => 'عدد المقاعد',
+        'student_id' => 'الطالب',
+        'training_course_id' => 'الدورة التدريبية',
+    ],
+];

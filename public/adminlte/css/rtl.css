@@ -1,0 +1,89 @@
+/* RTL overrides for AdminLTE 3 / Bootstrap 4, which ship left-to-right only. */
+
+body,
+h1, h2, h3, h4, h5, h6,
+.btn, .form-control, .nav-link, .brand-text {
+    font-family: 'Cairo', Tahoma, Arial, sans-serif;
+}
+
+html[dir="rtl"] body { text-align: right; }
+
+html[dir="rtl"] .navbar-nav,
+html[dir="rtl"] .nav,
+html[dir="rtl"] .pagination { padding-right: 0; }
+
+/* Sidebar on the right */
+html[dir="rtl"] .main-sidebar {
+    left: auto !important;
+    right: 0;
+    margin-left: 0 !important;
+    transition: margin-right .3s ease-in-out, width .3s ease-in-out;
+}
+
+html[dir="rtl"] .nav-sidebar .nav-link > .nav-icon {
+    margin-left: .5rem;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .brand-link { text-align: right; }
+html[dir="rtl"] .brand-link .brand-icon { margin: 0 .6rem; }
+
+/* Desktop: page content leaves room for the sidebar on the right */
+@media (min-width: 992px) {
+    html[dir="rtl"] .content-wrapper,
+    html[dir="rtl"] .main-footer,
+    html[dir="rtl"] .main-header {
+        margin-left: 0 !important;
+        margin-right: 250px;
+        transition: margin-right .3s ease-in-out;
+    }
+
+    html[dir="rtl"] .sidebar-mini.sidebar-collapse .content-wrapper,
+    html[dir="rtl"] .sidebar-mini.sidebar-collapse .main-footer,
+    html[dir="rtl"] .sidebar-mini.sidebar-collapse .main-header {
+        margin-left: 0 !important;
+        margin-right: 4.6rem;
+    }
+}
+
+/* Mobile: sidebar slides in from the right */
+@media (max-width: 991.98px) {
+    /* Without this the off-screen sidebar widens the page and shifts it sideways */
+    html[dir="rtl"] .wrapper { overflow-x: hidden; }
+
+    html[dir="rtl"] .main-sidebar { margin-right: -250px; }
+    html[dir="rtl"] .sidebar-open .main-sidebar { margin-right: 0; }
+
+    html[dir="rtl"] .content-wrapper,
+    html[dir="rtl"] .main-footer,
+    html[dir="rtl"] .main-header {
+        margin-left: 0 !important;
+        margin-right: 0;
+    }
+}
+
+/* Cards */
+html[dir="rtl"] .card-title { float: right; }
+html[dir="rtl"] .card-tools { float: left; margin: -.3rem 0; }
+
+/* Dashboard boxes */
+html[dir="rtl"] .small-box .icon > i { right: auto; left: 15px; }
+
+/* Dismissible alerts */
+html[dir="rtl"] .alert-dismissible { padding-left: 4rem; padding-right: 1.25rem; }
+html[dir="rtl"] .alert-dismissible .close { right: auto; left: 0; }
+
+/* Helpers */
+.actions { display: flex; flex-wrap: wrap; gap: .35rem; }
+.student-photo { width: 42px; height: 42px; object-fit: cover; border-radius: 50%; }
+.student-photo-placeholder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #e9ecef;
+    color: #6c757d;
+}
+.table td, .table th { vertical-align: middle; }
